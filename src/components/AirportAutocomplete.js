@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Autocomplete } from "@mui/material";
 import axios from "axios";
+import debounce from "lodash.debounce"; // Imported only debounce
 import MockJSON from "../MockJSON";  // Import MockJSON for mock data
 
 // Use the environment variable to decide whether to fetch live data or use mock data
@@ -11,8 +12,16 @@ const AirportAutocomplete = ({ label, onSelect }) => {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    
-    const fetchAirports = async () => {
+    fetchAirportsDebounced(inputValue);
+
+    return () => {
+      fetchAirportsDebounced.cancel();
+    };
+  }, [inputValue]);
+
+  // Debounced function to handle the API request
+  const fetchAirportsDebounced = debounce(async (inputValue) => {
+    const fetchAirports = async (inputValue) => {
       if (inputValue) {
         if (USE_MOCK_DATA) {
           try {
@@ -54,8 +63,8 @@ const AirportAutocomplete = ({ label, onSelect }) => {
       }
     };
 
-    fetchAirports();
-  }, [inputValue]);
+    fetchAirports(inputValue);
+  }, 300);
 
   return (
     <Autocomplete
