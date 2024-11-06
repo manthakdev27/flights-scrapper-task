@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Google Flights Clone - Responsive Version
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive clone of Google Flights built using **React** and **Material UI**. It fetches flight data using the **Sky Scrapper API** from RapidAPI, which provides flight search and booking information.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Info
 
-### `npm start`
+### **Technologies Used**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: For building the UI and managing state
+- **Material UI**: For responsive and modern UI components
+- **Sky Scrapper API** (from [RapidAPI](https://rapidapi.com/apiheya/api/sky-scrapper)): Provides flight search data
+- **Axios**: For making HTTP requests
+- **CSS**: For custom styling (additional customizations made to enhance responsiveness)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Features**
 
-### `npm test`
+- **Flight Search**: Users can search for flights by inputting departure and destination locations, as well as travel dates.
+- **Responsive Design**: The interface adjusts seamlessly across various screen sizes (desktop, tablet, and mobile).
+- **Flight Details**: Displays available flights, airlines, prices, and other relevant information from the Sky Scrapper API.
+- **Flight Filters**: Allows users to filter results based on criteria like price, airlines, etc.
+- **Interactive UI**: Modern, user-friendly interface powered by Material UI components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Setup Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/manthakdev27/flights-scrapper-task.git
+   cd flights-scrapper-task
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Get an API Key**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Go to [Sky Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper) and sign up for a RapidAPI account.
+   - Get your API key from the [Sky Scrapper API page](https://rapidapi.com/apiheya/api/sky-scrapper).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Set up Environment Variables**
+   ```bash
+   Update .env file in the root of your project and update your API key like this:
 
-### `npm run eject`
+   REACT_APP_API_KEY=your-rapidapi-key
+   ```
+5. **Start the Application**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
