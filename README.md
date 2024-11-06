@@ -52,3 +52,10 @@ This project is a responsive clone of Google Flights built using **React** and *
    ```
 
 ---
+## UI
+
+1. **Flight Search UI**
+![Screenshot_1](https://github.com/user-attachments/assets/8113320e-ec28-4590-90f2-7ae17ab97089)
+
+2. **Flight Result UI**
+![Screenshot_2](https://github.com/user-attachments/assets/01d83600-1c2f-4c1a-8957-5d296d844ca4)
