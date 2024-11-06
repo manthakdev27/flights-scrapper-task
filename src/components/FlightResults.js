@@ -41,7 +41,7 @@ const FlightResults = ({ flights, loading }) => {
   return (
     <Box sx={{ marginTop: 3 }}>
       {flights.map((itinerary, index) => {
-        const flightLeg = flightDetails.legs[0]; // Extract first leg of the flight
+        const flightLeg = itinerary.legs[0]; // Extract first leg of the flight
         const airlineInfo = flightLeg.carriers.marketing[0]; // Marketing carrier info
         const formattedDepartureTime = new Date(flightLeg.departure).toLocaleString();
         const formattedArrivalTime = new Date(flightLeg.arrival).toLocaleString();
